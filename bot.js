@@ -6,6 +6,9 @@ const logger = require ('./logger');
 
 const Discord = require('discord.js');
 
+const { Users, UserPayments } = require('./dbObjects');
+const { Op } = require('sequelize');
+
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
@@ -17,14 +20,14 @@ for (const file of commandFiles) {
 
 const cooldowns = new Discord.Collection();
 
-// Initialize Discord Bot
-
+// Initialize Discord Bot and Database
 client.on('ready', () => {
     logger.info(`Logged in as ${client.user.tag}!`);
 });
 
 client.on('message', message => {
     if (!message.content.startsWith(prefix) || message.author.bot) return;
+
 
     const args = message.content.slice(prefix.length).split(/ +/);
     const commandName = args.shift().toLowerCase();

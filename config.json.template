@@ -1,4 +1,8 @@
 {
     "prefix": "!",
     "token": "YOUR-BOT-TOKEN"
+    "db_name": "discord",
+    "db_username": "discord",
+    "db_password": "password",
+    "db_host": "localhost"
 }
