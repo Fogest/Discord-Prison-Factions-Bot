@@ -1,7 +1,13 @@
 {
   "name": "discord-bot-fogcraft",
   "version": "1.0.0",
+  "description": "Cosmic Prisons Discord Bot for FogCraft server to help manage things",
+  "main": "bot.js",
+  "author": "Justin <justin@jhvisser.com>",
   "dependencies": {
-    
+    "discord.js": "^11.5.1",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7",
+    "winston": "^3.2.1"
   }
 }
