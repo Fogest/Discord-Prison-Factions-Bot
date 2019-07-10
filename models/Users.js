@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    sequelize.define('users', {
+    return sequelize.define('users', {
         discord_id: {
             type: DataTypes.STRING,
             primaryKey: true,

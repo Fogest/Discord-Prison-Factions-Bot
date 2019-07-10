@@ -1,4 +1,4 @@
-
+#!/usr/bin/env node
 const fs = require('fs');
 const { prefix, token } = require('./config.json');
 
@@ -23,6 +23,9 @@ const cooldowns = new Discord.Collection();
 // Initialize Discord Bot and Database
 client.on('ready', () => {
     logger.info(`Logged in as ${client.user.tag}!`);
+
+    client.user.setActivity('Enforcer Training')
+        .then(logger.info(`Bot activity set!`));
 });
 
 client.on('message', message => {

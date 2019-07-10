@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    sequelize.define('user_payments', {
+    return sequelize.define('user_payments', {
         payment_id: {
             type: DataTypes.INTEGER,
             primaryKey: true,

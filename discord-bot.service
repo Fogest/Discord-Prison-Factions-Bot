@@ -1,0 +1,15 @@
+[Unit]
+Description=Discord Bot for FogCraft Server
+
+[Service]
+ExecStart=/home/jhvisser/bin/discord-bot-fogcraft/bot.js
+Restart=always
+User=jhvisser
+# Note Debian/Ubuntu uses 'nogroup', RHEL/Fedora uses 'nobody'
+Group=jhvisser
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=NODE_ENV=production
+WorkingDirectory=/home/jhvisser/bin/discord-bot-fogcraft/
+
+[Install]
+WantedBy=multi-user.target
