@@ -28,5 +28,6 @@ module.exports = (sequelize, DataTypes) => {
         },
         amount_verified_by_id: DataTypes.STRING,
         token_verified_by_id: DataTypes.STRING,
+        reminder_completed: DataTypes.BOOLEAN
     });
 };
