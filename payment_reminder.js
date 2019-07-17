@@ -72,9 +72,6 @@ async function generatePayments(channel) {
         attributes: ['payment_id', 'discord_id', 'reminder_completed'],
         where: {
             [Op.or]: [{reminder_completed: null}, {reminder_completed: 0}],
-            due_date: {
-                [Op.between]: [moment().startOf('day').toDate(), moment().endOf('day').toDate()]
-            }
         }
     });
 
